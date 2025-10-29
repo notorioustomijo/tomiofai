@@ -44,12 +44,12 @@ export default function BuildCard({ project }) {
                     <p className={styles.anatomyText}>{project.next}</p>
                 </div>
 
-                {project.note && (
-                    <div className={styles.note}>
-                        {project.note}
-                    </div>
-                )}
             </div>
+            {project.note && (
+                <div className={styles.note}>
+                    // {project.note}
+                </div>
+            )}
         </article>
     )
 }
