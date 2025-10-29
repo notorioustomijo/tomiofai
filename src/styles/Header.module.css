@@ -1,0 +1,84 @@
+.header {
+    position: relative;
+    margin-bottom: 8.75rem;
+    padding-bottom: 60px;
+}
+
+.label {
+    font-size: 0.625rem;
+    color: #00e0ff;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    margin-bottom: 3.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    opacity: 0.5;
+}
+
+.title {
+    font-size: clamp(42px, 7vw, 84px);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #e8e8e8;
+    letter-spacing: -0.125rem;
+    line-height: 1.1;
+}
+
+.glitch {
+    animation: glitch 0.3s ease;
+    text-shadow: 2px 2px #00e0ff, -2px -2px #8a7fff;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #dcc178;
+    margin-bottom: 3rem;
+    font-family: 'JetBrains Mono', monospace;
+    opacity: 0.8;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.separator {
+    color: #666;
+    margin: 0 0.5rem;
+}
+
+.bracket,
+.arrow {
+    color: #666;
+}
+
+.statusBox {
+    padding: 2rem;
+    background: rgba(0, 224, 255, 0.03);
+    border: 1px solid rgba(0, 244, 255, 0.2);
+    border-left: 4px solid #00e0ff;
+    width: 100%;
+}
+
+.statusLabel {
+    font-size: 0.625rem;
+    color: #00e0ff;
+    opacity: 0.6;
+    letter-spacing: 0.125rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.statusText {
+    font-size: 16px;
+    color: #e8e8e8;
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .header {
+        margin-bottom: 5rem;
+    }
+    .statusBox {
+        padding: 1.5rem;
+    }
+}

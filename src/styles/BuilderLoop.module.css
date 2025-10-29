@@ -1,0 +1,63 @@
+.section {
+    margin-bottom: 6.25rem;
+    padding: 3.5rem;
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid rgba(0, 224, 255, 0.2);
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    font-size: 0.75rem;
+    color: #00e0ff;
+    font-family: 'JetBrains Mono', monospace;
+    opacity: 0.5;
+}
+
+.title {
+    font-size: 2rem;
+    color: #00e0ff;
+    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+.list {
+    font-size: 1rem;
+    color: #e8e8e8;
+    line-height: 2;
+    opacity: 0.85;
+    max-width: 45rem;
+    padding-left: 1.75rem;
+    list-style: none;
+}
+
+.step {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.number {
+    color: #00e0ff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.stepLabel {
+    color: #00e0ff;
+}
+
+.stepDesc {
+    color: #e8e8e8;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 2.5rem 1.5rem;
+    }
+}

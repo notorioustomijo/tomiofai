@@ -1,0 +1,190 @@
+.card {
+    position: relative;
+    background: rgba(10, 10, 10, 0.7);
+    border: 1px solid rgba(0, 224, 255, 0.15);
+    padding: 3rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+.card.revealed {
+    background: rgba(12, 12, 12, 0.9);
+    border: 1px solid rgba(0, 224, 255, 0.4);
+}
+
+.corner {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-style: solid;
+    border-color: #00e0ff;
+    opacity: 0.2;
+    transition: opacity 0.4s ease;
+}
+
+.card.revealed .corner {
+    opacity: 1;
+}
+
+.topLeft {
+    top: 0;
+    left: 0;
+    border-width: 2px 0 0 2px;
+}
+
+.topRight {
+    top: 0;
+    right: 0;
+    border-width: 2px 2px 0 0;
+}
+
+.bottomLeft {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 2px 2px;
+}
+
+.bottomRight {
+    bottom: 0;
+    right: 0;
+    border-width: 0 2px 2px 0;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.75rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cardInfo {
+    flex: 1;
+    min-width: 17.5rem;
+}
+
+.projectName {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #e8e8e8;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.0625rem;
+}
+
+.projectStack {
+    font-size: 0.75rem;
+    color: #8a7fff;
+    font-family: 'JetBrains Mono', monospace;
+    opacity: 0.7;
+}
+
+.description {
+    font-size: 1rem;
+    color: #e8e8e8;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+.visual {
+    width: 100%;
+    height: 20rem;
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(0, 224, 255, 0.15);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.visualPlaceholder {
+    font-size: 0.875rem;
+    color: #00e0ff;
+    font-family: 'JetBrains Mono', monospace;
+    opacity: 0.4;
+}
+
+.grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 224, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 224, 255, 0.03) 1px, transparent 1px);
+    background-size: 2.5rem 2.5rem;
+    pointer-events: none;
+}
+
+.anatomy {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 2.5rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(0, 224, 255, 0.1);
+    opacity: 0.6;
+    transition: opacity 0.4s ease;
+}
+
+.card.revealed .anatomy {
+    opacity: 1;
+}
+
+.anatomyLabel {
+    font-size: 0.625rem;
+    color: #00e0ff;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.anatomySection:nth-child(3) .anatomyLabel {
+    color: #dcc178;
+}
+
+.anatomyText {
+    font-size: 0.875rem;
+    color: #e8e8e8;
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+.anatomyDivider {
+    width: 0.0625rem;
+    background: linear-gradient(to bottom, transparent, rgba(0, 224, 255, 0.3), transparent);
+}
+
+.note {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    background: rgba(138, 127, 255, 0.05);
+    border-left: 3px solid #8a7fff;
+    font-size: 0.875rem;
+    color: #8a7fff;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .anatomy {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .anatomyDivider {
+        display: none;
+    }
+
+    .visual {
+        height: 15rem;
+    }
+}
