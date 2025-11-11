@@ -18,7 +18,7 @@ export default function Portfolio() {
             stack: 'React • Express • MongoDB • LLM API • LangGraph',
             status: 'LIVE',
             desc: 'AI sales/support agent for the web. Designed to answer FAQs, qualify leads, and capture contact details.',
-            current: 'Half-built. UI + initial intent path working; lead capture stubbed; backend wiring in progress.',
+            current: 'Backend deployed and hosted. Widget built and hosted. Dashboard built and deployed.',
             next: 'Implement RAG to allow users provide a link Nova can crawl and generate a knowledgebase from',
             note: 'Goal is reliability over breadth-prove one clean path end-to-end before expanding.',
             link: 'https://nova.mavrikon.net/demo',
