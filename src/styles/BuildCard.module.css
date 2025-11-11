@@ -1,3 +1,9 @@
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .card {
     position: relative;
     background: rgba(10, 10, 10, 0.7);
@@ -12,6 +18,7 @@
 .card.revealed {
     background: rgba(12, 12, 12, 0.9);
     border: 1px solid rgba(0, 224, 255, 0.4);
+    transform: translateY(-4px);
 }
 
 .corner {
@@ -103,11 +110,38 @@
     transition: all 0.4s ease;
 }
 
+.card.revealed .visual {
+    border-color: rgba(0, 224, 255, 0.3);
+}
+
+.wireframeContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.visualImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    opacity: 0.9;
+    transition: opacity 0.4s ease;
+}
+
+.card.revealed .visualImage {
+    opacity: 1;
+}
+
 .visualPlaceholder {
     font-size: 0.875rem;
     color: #00e0ff;
     font-family: 'JetBrains Mono', monospace;
     opacity: 0.4;
+    position: relative;
+    z-index: 1;
 }
 
 .grid {
@@ -118,6 +152,7 @@
         linear-gradient(90deg, rgba(0, 224, 255, 0.03) 1px, transparent 1px);
     background-size: 2.5rem 2.5rem;
     pointer-events: none;
+    z-index: 2;
 }
 
 .anatomy {

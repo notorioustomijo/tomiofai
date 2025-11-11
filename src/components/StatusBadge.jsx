@@ -24,7 +24,6 @@ export default function StatusBadge({ status }) {
             role="status"
             aria-label={`Project status: ${config.label}`}
         >
-            <div className={`${styles.indicator} ${status === 'LIVE' ? styles.glow : styles.breathe }`}></div>
             <span>{status}</span>
         </div>
     )

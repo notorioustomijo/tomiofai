@@ -22,7 +22,7 @@ export default function Header() {
             </div>
 
             <h1 className={`${styles.title} ${glitch ? styles.glitch : ''}`}>
-                Technology should feel human.
+                Tech should feel human.
             </h1>
 
             <div className={styles.subtitle}>
@@ -30,6 +30,8 @@ export default function Header() {
                 <span className={styles.separator}>•</span>
                 <span className={styles.bracket}>{'<'}</span>
                 Ex-Doctor
+                <span className={styles.arrow}>{' → '}</span>
+                Product Designer
                 <span className={styles.arrow}>{' → '}</span>
                 AI Artisan
                 <span className={styles.bracket}>{ ' />' }</span>
